@@ -8,21 +8,21 @@ Original file is located at
 """
 
 import pandas as pd
-df_heart = pd.read_csv('/content/heart.csv')
-display(df_heart.head(5))
+df = pd.read_csv('/content/heart.csv')
+display(df.head(5))
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 plt.figure(figsize=(11,11))
-sns.heatmap(df_heart.corr(), annot=True, cmap='coolwarm')
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
 plt.show()
 
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 plt.figure(figsize=(7,5))
-sns.histplot(df_heart['age'], bins=20, kde=True)
+sns.histplot(df['age'], bins=20, kde=True)
 
 plt.title('Age Distribution of Patients', fontsize=14)
 plt.xlabel('Age (years)')
